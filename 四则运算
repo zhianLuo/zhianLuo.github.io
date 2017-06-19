@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p>在页面以输入框的形式，实现一个可以实现四则运算和取余的计算器。</p>
+		<input type="text" name="" id="inp1" value="" placeholder="请输入第一个数字" />
+		<select id="selectId" name="">
+			<option id="add"      >+</option>
+			<option id="minus"    >-</option>
+			<option id="multiply" >*</option>
+			<option id="divided"  >/</option>
+			<option id="remainder">%</option>
+		</select>
+		<input type="text" name="" id="inp2" value="" placeholder="请输入第二个数字" />=
+		<input type="text" name="" id="inp3" value="" placeholder="计算结果"/>
+		<button onclick="foo()">计算</button>
+	<script type="text/javascript">
+		//声明三个input
+		var inp1 = document.getElementById("inp1")
+		var inp2 = document.getElementById("inp2")
+		var inp3 = document.getElementById("inp3")
+		//获取sele
+		var selectId = document.getElementById("selectId")
+		
+		//按钮点击事件，运算函数 foo（）
+		function foo(){
+			//当选中 + 做加法运算
+			if(selectId.selectedIndex == 0){
+				inp3.value = +inp1.value + +inp2.value;		 
+			}
+			//当选中 - 做减法运算
+			if(selectId.selectedIndex == 1){
+				inp3.value = inp1.value - inp2.value;
+			}
+			//当选中 * 做乘法运算
+			if(selectId.selectedIndex == 2){
+				inp3.value = inp1.value * inp2.value;
+			}
+			//当选中 / 做除法运算
+			if(selectId.selectedIndex == 3){
+				inp3.value  =  inp1.value / inp2.value;
+			}
+			//当选中 % 取余
+			if(selectId.selectedIndex == 4){
+				inp3.value  =  inp1.value % inp2.value;
+			}
+		}
+	</script>
+	</body>
+</html>
