@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>灯泡点击事件</title> 
+</head>
+<body>
+	<img id="myimage" onclick="changeImage()" src="img/cyan.gif" width="100" height="180">
+	<p>点击灯泡就可以打开或关闭这盏灯</p>
+<!--<script>
+	function changeImage(){
+		element=document.getElementById('myimage')
+		if (element.src.match("yellow")){
+  			element.src="../img/cyan.gif";
+  		}
+		else{
+  		element.src="../img/yellow.gif";
+   		}
+	}
+</script>-->
+<script>
+	function changeImage(){
+		var element=document.getElementById("myimage")
+		if (element.src.match("yellow")){
+  			element.src="img/cyan.gif";
+  		}
+		else{
+  		element.src="img/yellow.gif";
+   		}
+	}
+</script>	
+	
+</body>
+</html>
