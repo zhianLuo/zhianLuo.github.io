@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+
+<body>
+	<input type="text" id="t" />
+	<input type="button" value="请留言" id="btn" />
+	<ol id="con">
+
+	</ol>
+</body>
+
+</html>
+<script src=""></script>
+<script>
+
+	//1获取btn t con
+	//2.给btn注册一个点击事件 
+	//3.事件处理程序中
+	//a，获取t的value tVal
+	//b,创建一个li节点
+	//c，将tVal赋值给li
+	//d，将li插入到con的第一个子节点的前面
+	//d,判断con下子元素节点是否超过了5个
+	//e,如果有了6个，将第六个删除。
+
+
+	btn.onclick = function () {
+		var tValue = t.value;
+		var newLi = document.createElement("li");
+		newLi.innerText = tValue;
+		con.insertBefore(newLi,con.firstChild); //添加到前面
+		var conChilds = con.childNodes;
+		if (conChilds.length > 5) {
+			con.lastChild.remove();
+		}
+		t.value = "";
+	}
+</script>
